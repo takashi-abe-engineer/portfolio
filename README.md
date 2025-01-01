@@ -4,7 +4,7 @@
 このポートフォリオは以下のリンクからご覧いただけます：  準備中
 
 ## 概要
-初めてデザインからデプロイまで手掛けたポートフォリオです。
+初めてデザインからデプロイまで手掛けたポートフォリオです。<br>
 状態管理が入っていないので完全なSPAではありませんが、基本的にHTML・CSS・PHPで構成され、ページはjQueryで切り替わるようになっています。
 
 ## 各ページ
@@ -24,9 +24,9 @@
 PHPを使用して作成したフォームがあり、実際に動作します。
 
 ## 作成・実装時
-デザインについては素人ですので、なかなか納得のいくものが出来上がらず、いつでも作り変えられるので、とりあえずシンプルなものを目指しました。
-あまり時間もかけられないためhtmlファイル一つで構成を考え、また伝えたい情報を簡潔に伝えるためにできる限り1画面で収まるようにしました。
-コーディングについては所属中の社内ルールを適用しており、まだまだ整理しなければならないところが多いです。
+デザインについては素人ですので、なかなか納得のいくものが出来上がらず、いつでも作り変えられるので、とりあえずシンプルなものを目指しました。<br>
+あまり時間もかけられないためhtmlファイル一つで構成を考え、また伝えたい情報を簡潔に伝えるためにできる限り1画面で収まるようにしました。<br>
+コーディングについては所属中の社内ルールを適用しており、まだまだ整理しなければならないところが多いです。<br>
 お問い合わせについては初めて素のPHPで実装しています。エンジニアであれば誰もが経験していると思うのですが、想定外のエラーが出まして送信がなかなかうまくいかず想定の倍は時間がかかりました。
 
 ## 課題
@@ -54,16 +54,16 @@ PHPを使用して作成したフォームがあり、実際に動作します�
 **その他**：5時間
 
 ## ライセンス (日本語)
-このプロジェクトは、個人の学習や参考目的での利用を想定しています。  
+このプロジェクトは、個人の学習や参考目的での利用を想定しています。  <br>
 コードのクローンや閲覧は自由ですが、改変や再配布は禁止とします。  
 
-本プロジェクトの利用により生じた問題や損害について、作成者は一切の責任を負いません。  
+本プロジェクトの利用により生じた問題や損害について、作成者は一切の責任を負いません。  <br>
 ご自身の責任でご利用ください。
 
-This project is intended for personal use and learning purposes only.  
+This project is intended for personal use and learning purposes only.  <br>
 You are allowed to clone and view the code, but modifications and redistribution are not permitted.  
 
-The author assumes no responsibility for any issues or damages that may arise from the use of this project.  
+The author assumes no responsibility for any issues or damages that may arise from the use of this project.  <br>
 Use at your own risk.
 
 ## 連絡先
