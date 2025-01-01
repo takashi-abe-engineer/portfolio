@@ -166,8 +166,15 @@ $(function () {
         // バリデーション通過後にデータ送信
         const formData = new FormData(this);
 
+        // 現ページのURLをベースにする
+        const baseUrl = window.location.origin;
+        // 環境の確認
+        const isLocal = baseUrl.includes('http://portfolio.local.com');
+        // ベースの作成
+        const url = isLocal ? baseUrl : baseUrl + '/portfolio'
+
         $.ajax({
-            url: "/send.php",
+            url: url + "/send.php",
             type: "POST",
             data: formData,
             processData: false, // フォームデータを文字列として処理しない
