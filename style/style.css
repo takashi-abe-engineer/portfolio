@@ -1,0 +1,758 @@
+/* 共通 */
+body {
+    font-family: Noto Serif JP, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    height: 100vh;
+    line-height: 1.75;
+    overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+    .pc_display {
+        display: block;
+    }
+    .sp_display {
+        display: none;
+    }
+}
+@media screen and (max-width: 767px) {
+    .pc_display {
+        display: none;
+    }
+    .sp_display {
+        display: block;
+    }
+}
+
+/* アニメーションで背景にクロスラインを走らせようと思ったが邪魔なのでコメントアウト */
+/* .line {
+    position: absolute;
+    background: black;
+}
+.line-x {
+    height: 2px;
+    width: 0;
+}
+.line-y {
+    width: 2px;
+    height: 0;
+} */
+
+.nav {
+    position: absolute;
+    z-index: 100;
+}
+.nav_li {
+    align-items: center;
+    background-color: #5c5c5c;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.top_page.active {
+    background-color: #e57cff;
+}
+.my_page.active {
+    background-color: #ff5757;
+}
+.skill_page.active {
+    background-color: #97ff57;
+}
+.work_page.active {
+    background-color: #57ffee;
+}
+.contact_page.active {
+    background-color: #6854ff;
+}
+
+.page_section {
+    opacity: 0;
+}
+.page_section.active {
+    opacity: 1;
+}
+.page_content {
+    height: 100%;
+    position: relative;
+}
+
+.skill_position {
+    display: flex;
+}
+.skill_li {
+    color: #000000;
+    position: relative;
+}
+.html::before {
+    background-color: #ff8928;
+}
+.css::before {
+    background-color: #ff41f2;
+}
+.js::before {
+    background-color: #55de43;
+}
+.react::before {
+    background-color: #2f5cf1;
+}
+.extra::before {
+    background-color: #929292;
+}
+.php::before {
+    background-color: #ff3a28;
+}
+.python::before {
+    background-color: #ffd941;
+}
+.mysql::before {
+    background-color: #ff7300;
+}
+.git::before {
+    background-color: #ff4144;
+}
+.aws::before {
+    background-color: #ffe91e;
+}
+.apache::before {
+    background-color: #eb005a;
+}
+.gcp::before {
+    background-color: #2e31ff;
+}
+.dots-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.dots-wrap li {
+    background: #939393;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 10px;
+    margin: 0 5px;
+    width: 10px;
+}
+.dots-wrap li:hover,
+.dots-wrap li.slick-active {
+    background: coral;
+}
+.dots-wrap li button {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    display: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    padding: 0;
+}
+
+.work_detail {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+}
+.work_detail.active {
+    opacity: 1;
+}
+.work_detail,
+.my_text {
+    overflow-y: scroll;
+}
+/* スクロールのカスタムデザイン */
+.work_detail::-webkit-scrollbar,
+.my_text::-webkit-scrollbar {
+    background-color: transparent;
+    border-radius: 3px;
+    width: 3px;
+}
+.work_detail::-webkit-scrollbar-thumb,
+.my_text::-webkit-scrollbar-thumb {
+    background-color: #929292;
+    border-radius: 3px;
+    width: 3px;
+}
+
+.input_name,
+.input_email,
+.textarea_message {
+    display: flex;
+    flex-direction: column;
+}
+.input_form {
+    background-color: #e7e7e7;
+}
+.input_form::placeholder {
+    color: #3e3e3e;
+}
+.textarea_form {
+    background-color: #e7e7e7;
+}
+.submit_button {
+    text-align: center;
+}
+
+/* end */
+
+@media screen and (min-width: 768px) {
+    /* 全体 */
+    .wrapper {
+        height: 100vh;
+        max-width: 100%;
+        overflow: hidden;
+        padding: 30px;
+    }
+    header {
+        margin-bottom: 25px;
+    }
+    footer {
+        bottom: -24px;
+        position: absolute;
+        right: 0;
+        text-align: right;
+    }
+    .page_content {
+        margin: 0 auto;
+        max-width: 950px;
+    }
+    .page_section {
+        height: calc(100vh - 130px);
+    }
+    .section_page_content {
+        max-width: calc(100% - 75px);
+    }
+
+    /* ナビ */
+    .nav {
+        right: 0;
+        top: 45px;
+    }
+    .nav_li {
+        border-radius: 22px;
+        height: 44px;
+        margin-top: 14px;
+        width: 44px;
+    }
+
+    /* トップ */
+    .portfolio {
+        font-size: 20px;
+        font-weight: normal;
+        letter-spacing: 5px;
+    }
+    .catchphrase {
+        font-size: 36px;
+        left: 50%;
+        position: absolute;
+        text-align: center;
+        top: calc(50% - 65px);
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+    .name_position {
+        bottom: 45px;
+        position: absolute;
+        right: 50px;
+    }
+    .name {
+        display: inline-block;
+        font-size: 28px;
+    }
+    .name::after {
+        background-color: #000000;
+        content: '';
+        display: block;
+        height: 1px;
+        left: 20px;
+        position: relative;
+        width: 105%;
+    }
+
+    /* 自己紹介 */
+    .my_text {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        text-align: left;
+    }
+
+    /* スキル */
+    .skill_and_achievements {
+        display: flex;
+    }
+    .engineer_skill {
+        width: 300px;
+    }
+    .achievements {
+        width: calc(100% - 300px);
+    }
+    .skill_position {
+        margin-top: 40px;
+    }
+    .skill_position:first-child {
+        margin-top: 0;
+    }
+    .graph {
+        width: 120px;
+    }
+    .skill_li {
+        font-size: 14px;
+        margin-top: 4px;
+        padding: 3px 0 3px 5px;
+        width: 120px;
+    }
+    .skill_li:first-child {
+        margin-top: 0;
+    }
+    .skill_li::before {
+        content: '';
+        left: 0;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        transition: width 0.35s;
+        width: 0;
+        z-index: -1;
+    }
+    .skill_li:hover::before {
+        width: 120px;
+    }
+    .achievement_head {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .achievement_text_ul .achievement_text_li {
+        margin-top: 10px;
+    }
+    .slider {
+        margin-top: 20px;
+    }
+    .achievement_box {
+        margin-top: 25px;
+    }
+    .achievement_slide .achievement_box:first-child {
+        margin-top: 0;
+    }
+
+    .slick-next {
+        bottom: -5px;
+        position: absolute;
+        right: 30%;
+    }
+    .slick-prev {
+        bottom: -5px;
+        position: absolute;
+        left: 30%;
+    }
+
+    /* 作品 */
+    .menu_and_detail {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+    .work_menu {
+        width: 100px;
+    }
+    .work_detail {
+        max-width: calc(100% - 100px);
+        width: 80%;
+    }
+    .work_li {
+        border: 1px solid #000000;
+        cursor: pointer;
+        margin-top: 15px;
+    }
+    .work_li:first-child {
+        margin-top: 0;
+    }
+    .work_li.active {
+        border: 1px solid #ff0000;
+    }
+    .work_image {
+        object-fit: cover;
+        width: 100%;
+    }
+    .work_detail_title {
+        font-size: 24px;
+        text-align: center;
+    }
+    .work_detail_link_and_date {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin: 20px auto 0;
+        width: 80%;
+    }
+    .work_detail_links {
+        display: flex;
+        justify-content: space-between;
+        width: 90px;
+    }
+    .work_detail_text {
+        height: calc(100vh - 260px);
+        margin-top: 15px;
+    }
+    .info_dl {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    dt {
+        align-items: center;
+        border-bottom: 1px solid #a9a9a9;
+        display: flex;
+        font-weight: normal;
+        padding: 10px 0;
+        width: 20%;
+    }
+    dd {
+        border-bottom: 1px solid #a9a9a9;
+        padding: 10px 0;
+        width: 80%;
+    }
+
+    /* お問い合わせ */
+    .contact_position {
+        height: calc(100% - 30px);
+        margin: 100px auto 0;
+        max-width: 900px;
+        width: 100%;
+    }
+    .form_position {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 70px;
+    }
+    .form_left {
+        margin-right: 20px;
+        max-width: 350px;
+        width: 50%;
+    }
+    .form_right {
+        max-width: 450px;
+        width: 50%;
+    }
+    .input_form {
+        padding: 10px;
+        width: 100%;
+    }
+    .input_email {
+        margin-top: 15px;
+    }
+    .textarea_form {
+        height: 140px;
+        padding: 10px;
+        width: 100%;
+    }
+    .submit_button {
+        margin: 70px auto 0;
+        width: 150px;
+    }
+    .submit_button button {
+        background-color: #ffffff;
+        font-size: 20px;
+        padding: 10px 0;
+        text-align: center;
+        transition: 0.5s;
+        width: 150px;
+    }
+    .submit_button:hover button {
+        background-color: #000000;
+        color: #ffffff;
+    }
+}
+
+/* 1200px超えの画面の場合コンテンツ調整 */
+@media screen and (min-width: 1200px) {
+    .page_content {
+        min-width: 1200px;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* 全体 */
+    body {
+        font-size: 14px;
+    }
+    .wrapper {
+        height: 100vh;
+        overflow: hidden;
+        padding: 10px 15px 0;
+    }
+    header {
+        margin-bottom: 10px;
+    }
+    footer {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        text-align: center;
+    }
+    .page_section {
+        height: calc(100vh - 140px);
+        overflow-y: hidden;
+    }
+    .section_page_content {
+        height: 100%;
+    }
+
+    /* ナビ */
+    .nav {
+        left: 0;
+        bottom: 25px;
+        width: 100%;
+    }
+    .nav_ul {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .nav_li {
+        border-radius: 25px;
+        height: 50px;
+        width: 50px;
+    }
+
+    /* トップ */
+    .portfolio {
+        font-size: 14px;
+        font-weight: normal;
+        letter-spacing: 5px;
+        text-align: center;
+    }
+    .catchphrase {
+        font-size: 28px;
+        left: 50%;
+        position: absolute;
+        text-align: center;
+        top: calc(50% - 50px);
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+    .name_position {
+        bottom: 95px;
+        position: absolute;
+        right: 30px;
+    }
+    .name {
+        display: inline-block;
+        font-size: 20px;
+    }
+    .name::after {
+        background-color: #000000;
+        content: '';
+        display: block;
+        height: 1px;
+        left: 20px;
+        position: relative;
+        width: 105%;
+    }
+
+    /* 自己紹介 */
+    .my_text {
+        height: 100%;
+        overflow-y: scroll;
+    }
+
+    /* スキル */
+    .achievements {
+        margin-top: 30px;
+    }
+    .skill_and_achievements {
+        height: 100%;
+        overflow-y: scroll;
+    }
+    .engineer_skill {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        min-width: 320px;
+        width: 80%;
+    }
+    .skill_position {
+        align-items: flex-start;
+        margin-top: 10px;
+        width: 100%;
+    }
+    .skill_position:first-child {
+        margin-top: 0;
+    }
+    .graph {
+        text-align: center;
+        width: 120px;
+    }
+    .graph_image {
+        aspect-ratio: 100 / 100;
+        height: auto;
+        width: 70px;
+    }
+    .skill_ul {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-between;
+        width: calc(100% - 120px);
+    }
+    .skill_li {
+        font-size: 10px;
+        margin-bottom: 10px;
+        padding: 0 0 0 15px;
+        width: 50%;
+    }
+    .skill_li::before {
+        content: '';
+        left: 0;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 10px;
+        z-index: -1;
+    }
+    .achievement_head {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .achievement_text_ul .achievement_text_li {
+        margin-top: 10px;
+    }
+    .slider {
+        margin-top: 20px;
+    }
+    .achievement_box {
+        margin-top: 25px;
+    }
+    .achievement_slide .achievement_box:first-child {
+        margin-top: 0;
+    }
+
+    .slick-next {
+        bottom: -5px;
+        position: absolute;
+        left: 75%;
+    }
+    .slick-prev {
+        bottom: -5px;
+        position: absolute;
+        right: 75%;
+    }
+
+    /* 作品 */
+    .menu_and_detail {
+    }
+    .work_menu {
+        overflow-x: scroll;
+        height: 70px;
+        width: 90%;
+    }
+    .work_detail {
+        height: calc(100vh - 140px - 90px);
+        margin-top: 5px;
+        width: 100%;
+    }
+    .work_ul {
+        display: flex;
+    }
+    .work_li {
+        border: 1px solid #000000;
+        cursor: pointer;
+        height: 50px;
+        margin-right: 10px;
+        min-width: 50px;
+        overflow: hidden;
+        width: 50px;
+    }
+    .work_li.active {
+        border: 1px solid #ff0000;
+    }
+    .work_image {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+    .work_detail_title {
+        font-size: 18px;
+        text-align: center;
+    }
+    .work_detail_link_and_date {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin: 10px auto 0;
+        width: 100%;
+    }
+    .work_detail_links {
+        display: flex;
+        justify-content: space-between;
+        width: 80px;
+    }
+    .work_detail_text {
+        height: 700px;
+        margin-top: 15px;
+    }
+    .info_dl {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    dt {
+        align-items: center;
+        border-bottom: 1px solid #a9a9a9;
+        display: flex;
+        font-weight: normal;
+        padding: 10px 0;
+        width: 20%;
+    }
+    dd {
+        border-bottom: 1px solid #a9a9a9;
+        padding: 10px 0 10px 5%;
+        width: 80%;
+    }
+
+    /* お問い合わせ */
+    .contact_position {
+        height: 100%;
+        padding-top: 10px;
+        overflow-y: scroll;
+    }
+    .form_position {
+        margin-top: 30px;
+    }
+    .form_left {
+        width: 100%;
+    }
+    .form_right {
+        width: 100%;
+    }
+    .input_form {
+        padding: 10px;
+        width: 100%;
+    }
+    .input_email {
+        margin-top: 15px;
+    }
+    .textarea_form {
+        padding: 10px;
+        width: 100%;
+    }
+    .textarea_form {
+        padding: 10px;
+    }
+    .textarea_message {
+        margin-top: 15px;
+    }
+    .submit_button {
+        margin: 30px auto 20px;
+    }
+    .submit_button button {
+        background-color: #000000;
+        color: #ffffff;
+        font-size: 16px;
+        padding: 10px 0;
+        text-align: center;
+        width: 150px;
+    }
+}

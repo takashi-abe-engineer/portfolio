@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TAKASHI ABE - PORTFOLIO -</title>
+    <meta name="description" content="TAKASHI ABEのポートフォリオ 「ひとつの行動が、未来を変える」" />
+
+    <meta name="robots" content="noindex, nofollow" />
+
+    <link rel="canonical" href="" />
+
+    <!-- 外部ファイルの読み込み -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="./js/slick.min.js"></script>
+    <script src="./js/main.js"></script>
+    <!-- スタイル初期化 -->
+    <link rel="stylesheet" href="./style/destyle.css" />
+    <link rel="stylesheet" type="text/css" href="./style/slick.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css" />
+
+    <link rel="shortcut icon" href="./images/favicon.ico">
+
+    <!-- facebookのOGP -->
+    <meta property="og:url" content="【ページのURL】" />
+    <meta property="og:title" content="TAKASHI ABE - PORTFOLIO -" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="TAKASHI ABEのポートフォリオ 「ひとつの行動が、未来を変える」" />
+    <meta property="og:image" content="./images/ogp.png" />
+    <meta property="og:site_name" content="TAKASHI ABE - PORTFOLIO -" />
+    <meta property="fb:app_id" content="" />
+    <meta property="og:locale" content="ja_JP" />
+
+    <!-- TwitterのOGP -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:description" content="TAKASHI ABEのポートフォリオ 「ひとつの行動が、未来を変える」" />
+    <meta name="twitter:image:src" content="./images/ogp.png" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="page_content">
+            <!-- サイト名は左上部固定 -->
+            <header>
+                <h1 class="portfolio">TAKASHI ABE - PORTFOLIO</h1>
+            </header>
+            <!-- ナビに合わせてjsページコンテンツ切替 -->
+            <nav class="nav">
+                <ul class="nav_ul">
+                    <li class="top_page nav_li active">
+                        <img src="./images/top.png" alt="トップページ" class="nav_icon" width="28px" height="28px">
+                    </li>
+                    <li class="my_page nav_li">
+                        <img src="./images/my.png" alt="自己紹介ページ" class="nav_icon" width="28px" height="28px">
+                    </li>
+                    <li class="skill_page nav_li">
+                        <img src="./images/skill.png" alt="スキルページ" class="nav_icon" width="29px" height="29px">
+                    </li>
+                    <li class="work_page nav_li">
+                        <img src="./images/work.png" alt="作品ページ" class="nav_icon" width="26px" height="26px">
+                    </li>
+                    <li class="contact_page nav_li">
+                        <img src="./images/contact.png" alt="お問い合わせページ" class="nav_icon" width="25px" height="25px">
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- トップページ -->
+            <section id="top" class="top_section page_section active">
+                <div class="section_page_content">
+                    <div class="catchphrase">ひとつの<ruby>行動<rt>おもい</rt></ruby>が、<br class="sp_display">未来を変える</div>
+                    <div class="name_position">
+                        <p class="name">TAKASHI ABE</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 自己紹介 -->
+            <section id="my" class="my_section page_section">
+                <div class="section_page_content">
+                    <p class="my_text">
+                        はじめまして。エンジニア歴6年目の阿部です。<br>
+                        フロントエンド・バックエンド共に手掛け、主にWEBサイトの作成と運用に携わってきました。2025年現在は、外部APIを用いた社内用の管理ツールの作成を担当しています。<br>
+                        特にLaravel業務ではCRUD操作などインフラを担当し、自社開発SNSではreactを用いてSPAの作成とAPIの開発を業務として行いました。<br><br>
+
+                        また、新人教育にも携わっています。<br>
+                        教える楽しさと難しさ、培った経験を伝え、より良いモノが世の中に出ることを望みます。<br><br>
+
+                        学生時代はゲームが日常でしたが、社会人になってからは小説を書く趣味へとシフトしました。最近、初めて東京に踏み入れ、そこで将来のことを考える様々な経験を得たことで危機感を覚えたところ。<br>
+                        人生を見つめ直し、設計して、望む未来のために、今までとは違う行動を心がけていきたい。<br><br><br>
+
+
+                        作った物が世の中に出る喜び、クリエイティブな仕事に誇りと楽しさを。<br>
+                        未来を創るエンジニア、<br>
+                        技術で誰かの役に立つモノを創る、それがエンジニアの醍醐味。
+                    </p>
+                </div>
+            </section>
+
+            <!-- スキル -->
+            <section id="skill" class="skill_section page_section">
+                <div class="section_page_content">
+                    <div class="skill_and_achievements">
+                        <div class="engineer_skill">
+                            <div class="front skill_position">
+                                <div class="graph">
+                                    <h2>フロントエンド</h2>
+                                    <img src="./images/front.svg" alt="フロントエンドスキルのグラフ" class="graph_image" width="100px" height="100px">
+                                </div>
+                                <!-- ホバーで該当色を表示 -->
+                                <ul class="skill_ul">
+                                    <li class="skill_li html">HTML</li>
+                                    <li class="skill_li css">CSS&SCSS</li>
+                                    <li class="skill_li js">Javascript</li>
+                                    <li class="skill_li react">React</li>
+                                    <li class="skill_li extra">Bootstrapなど</li>
+                                </ul>
+                            </div>
+                            <div class="back skill_position">
+                                <div class="graph">
+                                    <h2>バックエンド</h2>
+                                    <img src="./images/back.svg" alt="バックエンドスキルのグラフ" class="graph_image" width="100px" height="100px">
+                                </div>
+                                <ul class="skill_ul">
+                                    <li class="skill_li php">Laravel（PHP）</li>
+                                    <li class="skill_li python">Python</li>
+                                    <li class="skill_li extra">Bootstrapなど</li>
+                                </ul>
+                            </div>
+                            <div class="other skill_position">
+                                <div class="graph">
+                                    <h2>インフラ</h2>
+                                    <img src="./images/inflation.svg" alt="インフラスキルのグラフ" class="graph_image" width="100px" height="100px">
+                                </div>
+                                <ul class="skill_ul">
+                                    <li class="skill_li mysql">MySQL</li>
+                                    <li class="skill_li git">Git</li>
+                                    <li class="skill_li aws">AWS</li>
+                                    <li class="skill_li apache">Apache</li>
+                                    <li class="skill_li gcp">GCP</li>
+                                    <li class="skill_li extra">その他</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="achievements">
+                            <h2 class="achievement_head">実績</h2>
+                            <!-- スクロールではなくスライドで表示 -->
+                            <div class="achievement_slider slider">
+                                <div class="achievement_slide one_achievement">
+                                    <div class="achievement_box">
+                                        <p>
+                                            <strong>【入社1年目／アクセシビリティを考慮したWEBサイトの作成】</strong>
+                                        </p>
+                                        <ul class="achievement_text_ul">
+                                            <li class="achievement_text_li">
+                                                ・概要<br>
+                                                障がいを持った方が訪れても不自由なく閲覧できるように音声読み上げ、ALTの設定、配色、文字サイズ等考慮したサイト。
+                                            </li>
+                                            <li class="achievement_text_li">
+                                                ・担当（Laravel、javascript＆jQuery）<br>
+                                                主にフロントエンドのビュー作成。
+                                            </li>
+                                            <li class="achievement_text_li">
+                                                ・取り組み<br>
+                                                個人・法人と分れたページ構成は、ビューだけでも共通クラスやスタイルを考える必要があった。redmineでタスク管理を行った。
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="achievement_slide two_achievement">
+                                    <div class="achievement_box">
+                                        <p>
+                                            <strong>【入社2年目／オンラインで繋がるWEBサイトの作成】</strong>
+                                        </p>
+                                        <ul class="achievement_text_ul">
+                                            <li class="achievement_text_li">
+                                                ・概要<br>
+                                                オンライン会議用ツールを使い外出しなくても気軽に著名人とWEB上で繋がれる自社サービスサイトの開発。
+                                            </li>
+                                            <li class="achievement_text_li">
+                                                ・担当（Laravel、javascript＆jQuery）<br>
+                                                主にフロントエンドのビュー作成。
+                                            </li>
+                                            <li class="achievement_text_li">
+                                                ・取り組み<br>
+                                                短期間で仕上げる必要性もあり、みんなが一致団結してスケジュール通りに進めた。様々な人がオンラインで顔合わせするので、不具合等いっそう気を付けるところがあった。
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="achievement_slide three_achievement">
+                                    <div class="achievement_box">
+                                        <p>
+                                            <strong>【入社3～4年目／音声AIを用いた声の保存プロジェクトの開発】</strong>
+                                        </p>
+                                        <ul class="achievement_text_ul">
+                                            <li class="achievement_text_li">
+                                                ・概要<br>
+                                                自分の声を残して大切な人に贈るなど、声をAI学習させてバンクとして残そうというプロジェクト。
+                                            </li>
+                                            <li class="achievement_text_li">
+                                                ・担当（python、perl、shell、Laravel、mysql、adobe）<br>
+                                                音声AIの開発、及び、音声収集と編集。プロモーションムービーの作成。LPの作成。
+                                            </li>
+                                            <li class="achievement_text_li">
+                                                ・取り組み<br>
+                                                様々な分野を担当したがよくできたなと思う。すべてが大変の一言に尽きるが、AIの時代を感じ、様々なオープンソースを試し、精度の良い音声合成AIが作れた。
+                                                <br>
+                                                ※オープンソースを多少カスタムした程度です（AI開発は行っていません）
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="achievement_slide four_achievement">
+                                    <div class="achievement_box">
+                                        <p>
+                                            <strong>【入社4～5年目／自社SNSの開発】</strong>
+                                        </p>
+                                        <ul class="achievement_text_ul">
+                                            <li class="achievement_text_li">
+                                                ・概要<br>
+                                                ユーザーが投稿した目標や夢を、動画広告を視聴することで応援できる自社SNSサービスの開発。
+                                            </li>
+                                            <li class="achievement_text_li">
+                                                ・担当（react、Laravel）<br>
+                                                Laravel開発をreactにシフト開発。速度や効率に問題があるAPIの改善。
+                                            </li>
+                                            <li class="achievement_text_li">
+                                                ・取り組み<br>
+                                                SPAサイトの開発。reactによる開発は初めてで、laravelとは異なる状態管理やUI開発に戸惑った。上司に何度も説明をしてもらって理解を深め、同僚とコミュニケーションをとって開発を進めた。
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="achievement_slide five_achievement">
+                                    <div class="achievement_box">
+                                        <p>
+                                            <strong>【入社5年目～／広告運用のための社内管理ツールの開発】</strong>
+                                        </p>
+                                        <ul class="achievement_text_ul">
+                                            <li class="achievement_text_li">
+                                                ・概要<br>
+                                                日々チェックする広告の設定やデータをチェックしやすいように、各サービスのAPIを使い一つにまとめた管理ツールの開発。
+                                            </li>
+                                            <li class="achievement_text_li">
+                                                ・担当（Laravel、javascript＆jQuery、AWS、GCP）<br>
+                                                DB設計、サーバー構築（AWS）、サーバー監視システム構築、消費メモリ改善案と対策、プロジェクト管理、外部APIの確立。
+                                            </li>
+                                            <li class="achievement_text_li">
+                                                ・取り組み<br>
+                                                塵も積もれば山となる想像以上に膨大なデータ量が特徴。過去データも必要があり、DB構造と取得・保存は困難を極め、スペックを抑えつつ使えるように開発着手中。<br>
+                                                今まで開発してきた中で一番トライ＆エラーのあるプロジェクト。
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="achievement_slide six_achievement">
+                                    <div class="achievement_box">
+                                        <p>
+                                            この他にも、こんな経験をしています。
+                                        </p>
+                                        <ul class="achievement_text_ul">
+                                            <li class="achievement_text_li">
+                                                ・Wordpressを用いたWEBサイトの作成及び保守運用。
+                                            </li>
+                                            <li class="achievement_text_li">
+                                                ・管理画面テンプレート＆bootstrapを用いたロールによって異なる管理画面の開発。
+                                            </li>
+                                            <li class="achievement_text_li">
+                                                ・AWS Amplifyを使用した簡易SPAの作成。
+                                            </li>
+                                            <li class="achievement_text_li">
+                                                ・javascriptによるサイト上のアニメーションについて担当、SVGアニメーションも作成。
+                                            </li>
+                                            <li class="achievement_text_li">
+                                                ・新人教育～テスト試験の担当。
+                                            </li>
+                                            <li class="achievement_text_li">
+                                                ・GCPのAPIを活用したマップやスプレッドシートの編集。
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 作品 -->
+            <section id="work" class="work_section page_section">
+                <div class="section_page_content">
+                    <div class="menu_and_detail">
+                        <div class="work_menu">
+                            <!-- 作品の切り替え、増えればスクロール化 -->
+                            <ul class="work_ul">
+                                <li class="work_li active">
+                                    <img src="./images/work1.png" alt="ポートフォリオ" class="work_image" width="82px"
+                                        height="82px">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="work_detail active">
+                            <h2 class="work_detail_title">ポートフォリオ</h2>
+                            <div class="work_detail_link_and_date">
+                                <!-- github等公開済み外部サイト -->
+                                <div class="work_detail_links">
+                                    <a href="https://www.figma.com/design/fMhAzOBR0ymcDqp8NJI2KK/%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA?node-id=29-2&t=NCpBliEqMLOrmkJy-0"
+                                        class="link" target="_blank">
+                                        <img src="./images/figma.png" alt="ポートフォリオのfigma外部リンク" width="35px"
+                                            height="35px">
+                                    </a>
+                                    <a href="https://github.com/takashi-abe-engineer/portfolio" class="link"
+                                        target="_blank">
+                                        <img src="./images/github.png" alt="ポートフォリオのgithub外部リンク" width="35px"
+                                            height="35px">
+                                    </a>
+                                </div>
+                                <div class="work_detail_date">2024.12.30</div>
+                            </div>
+                            <!-- 物によって長くなるので、詳細は別途スクロール化 -->
+                            <div class="work_detail_text">
+                                <div class="work_detail_info">
+                                    <dl class="info_dl">
+                                        <dt class="info_dt">使用言語など</dt>
+                                        <dd class="info_dd">
+                                            フロントエンド：HTML、CSS、Javascript（Jquery）<br>
+                                            バックエンド：PHP<br>
+                                            その他：figma、github、Xserver、お名前.com
+                                        </dd>
+                                        <dt class="info_dt">作成時間</dt>
+                                        <dd class="info_dd">
+                                            デザイン：22時間<br>
+                                            コーディング：20時間<br>
+                                            実装：4.5時間<br>
+                                            デプロイ：3時間<br>
+                                            その他：5時間
+                                        </dd>
+                                        <dt class="info_dt">目的</dt>
+                                        <dd class="info_dd">
+                                            自分を表すサイトがなかったので作成を決意。<br>
+                                            伝わりにくい技術面や人柄が伝わればと思ってデザインから作成しています。
+                                        </dd>
+                                        <dt class="info_dt">制作過程</dt>
+                                        <dd class="info_dd">
+                                            1画面完結のシンプルで見やすいサイトを目指しました。<br>
+                                            デザインは専門外ですが、内容を重視して工夫しました（figmaには没案も掲載）。
+                                            コーディングについてはまだ勉強するところが多々ありますが、初心者の参考になるよう心掛けています。お問い合わせフォームは素のPHPで実装しています。そのほか今回気を付けた点についてはgithubのREADMEをご覧ください。
+                                        </dd>
+                                        <dt class="info_dt">改善</dt>
+                                        <dd class="info_dd">
+                                            やはり、納得のいくデザインにはなっていません。ここはなかなか難しいところなので、次回はデザイナーさんにお願いしたいところ。コーディングについても考えるところが多くあるので、適切なコードで作成していきたいです。
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- お問い合わせ -->
+            <section id="contact" class="contact_section page_section">
+                <div class="section_page_content">
+                    <div class="contact_position">
+                        <p class="contact_message">
+                            最後まで閲覧いただきありがとうございます。<br>
+                            このポートフォリオは、私が初めてデザインからデプロイまでを一貫して手がけた作品です。<br>
+                            WEBサイトやスキル、私についてなどコメントがありましたら気軽に下記フォームよりお問い合わせください。
+                        </p>
+                        <form id="contactForm">
+                            <input type="text" id="honeypot" name="honeypot" style="display: none;">
+                            <div class="form_position">
+                                <div class="form_left">
+                                    <div class="input_name">
+                                        <label for="name">お名前</label>
+                                        <input type="text" id="name" class="input_form" name="name" placeholder="お名前を入力してください" required>
+                                    </div>
+                                    <div class="input_email">
+                                        <label for="email">メールアドレス</label>
+                                        <input type="email" id="email" class="input_form" name="email" placeholder="メールアドレスを入力してください" required>
+                                    </div>
+                                </div>
+                                <div class="form_right">
+                                    <div class="textarea_message">
+                                        <label for="message">お問い合わせ内容</label>
+                                        <textarea id="message" class="textarea_form" name="message" placeholder="お問い合わせ内容を入力してください" rows="4"
+                                            required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 外部phpファイルによって送信処理 -->
+                            <div class="submit_button">
+                                <button type="submit">送信</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- コピーライトは右下部固定 -->
+            <footer>
+                <small>© 2025 TAKASHI ABE</small>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
