@@ -143,6 +143,9 @@ $(function () {
 
     // お問い合わせバリデーション
     $("#contactForm").on("submit", function (e) {
+        // 連続送信阻止
+        $('#submit').prop("disabled", true);
+
         e.preventDefault(); // デフォルトのフォーム送信を防ぐ
 
         const name = $("#name").val().trim();
@@ -184,6 +187,7 @@ $(function () {
                     const jsonData = JSON.parse(data); // JSONとして解析
                     if (jsonData.status === 'success') {
                         alert("お問い合わせが送信されました！");
+                        $('#submit').prop("disabled", false);
                     } else {
                         alert("エラーが発生しました");
                     }
