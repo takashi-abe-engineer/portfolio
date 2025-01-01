@@ -478,7 +478,7 @@ body {
         font-size: 14px;
     }
     .wrapper {
-        height: 100vh;
+        height: calc(100vh - 6%);
         overflow: hidden;
         padding: 10px 15px 0;
     }
@@ -493,7 +493,7 @@ body {
         text-align: center;
     }
     .page_section {
-        height: calc(100vh - 140px);
+        height: calc(100vh - 140px - 6%);
         overflow-y: hidden;
     }
     .section_page_content {
