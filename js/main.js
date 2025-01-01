@@ -167,7 +167,7 @@ $(function () {
         const formData = new FormData(this);
 
         $.ajax({
-            url: "../send.php",
+            url: "/send.php",
             type: "POST",
             data: formData,
             processData: false, // フォームデータを文字列として処理しない
