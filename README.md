@@ -24,16 +24,16 @@
 PHPを使用して作成したフォームがあり、実際に動作します。
 
 ## 作成・実装時
-**デザイン**
-これに関しては素人ですので、なかなか納得のいくものが出来上がらず、いつでも作り変えられるので、とりあえずシンプルなものを目指しました。今思うとfigmaは画面ごとに気って作成したらよかったなと思っています。<br>
+**デザイン**  
+これに関しては素人ですので、なかなか納得のいくものが出来上がらず、いつでも作り変えられるので、とりあえずシンプルなものを目指しました。今思うとfigmaは画面ごとに気って作成したらよかったなと思っています。  
 あまり時間もかけられないためhtmlファイル一つで構成を考え、また伝えたい情報を簡潔に伝えるためにできる限り1画面で収まるようにしました。
 
-**コーディング**
-社内ルールを適用しており、まだまだ整理しなければならないところが多いです。<br>
+**コーディング**  
+社内ルールを適用しており、まだまだ整理しなければならないところが多いです。  
 今回は特にcssの書き方にこだわりました。完全には分離できていませんが、PCとスマホで共通の部分とそうではない個別の部分に分けてレスポンシブ作成しています。
 
-**実装**
-お問い合わせについては初めて素のPHPで実装しています。エンジニアであれば誰もが経験していると思うのですが、想定外のエラーが出まして送信がなかなかうまくいかず想定の倍は時間がかかりました。<br>
+**実装**  
+お問い合わせについては初めて素のPHPで実装しています。エンジニアであれば誰もが経験していると思うのですが、想定外のエラーが出まして送信がなかなかうまくいかず想定の倍は時間がかかりました。  
 お名前.comでドメインを作成し、Xserverと連携して表示まで行うのも初めてのことで、エラーというかSSL設定やファイルの読み込みの修正に時間がかかりました。
 
 ## 課題
@@ -45,35 +45,44 @@ PHPを使用して作成したフォームがあり、実際に動作します�
 - デプロイまでの工程でも調べることが多かったので、今回はいい勉強となりました（chatGPTも優秀です）
 
 ## 使用技術
-**フロントエンド**：HTML、CSS、Javascript（Jquery）
+**フロントエンド**  
+HTML、CSS、Javascript（Jquery）
 
-**バックエンド**：PHP
+**バックエンド**  
+PHP
 
-**その他**：figma、github、Xserver、お名前.com
+**その他**  
+figma、github、Xserver、お名前.com
 
 ## 作成時間
-**デザイン**：22時間
+**デザイン**  
+22時間
 
-**コーディング**：20時間
+**コーディング**  
+20時間
 
-**実装**：4.5時間
+**実装**  
+4.5時間
 
-**デプロイ**：3時間
+**デプロイ**  
+3時間
 
-**その他**：5時間
+**その他**  
+5時間
 
 ## ライセンス (日本語)
-このプロジェクトは、個人の学習や参考目的での利用を想定しています。  <br>
+このプロジェクトは、個人の学習や参考目的での利用を想定しています。  
 コードのクローンや閲覧は自由ですが、改変や再配布は禁止とします。  
 
-本プロジェクトの利用により生じた問題や損害について、作成者は一切の責任を負いません。  <br>
+本プロジェクトの利用により生じた問題や損害について、作成者は一切の責任を負いません。  
 ご自身の責任でご利用ください。
 
-This project is intended for personal use and learning purposes only.  <br>
+This project is intended for personal use and learning purposes only.  
 You are allowed to clone and view the code, but modifications and redistribution are not permitted.  
 
-The author assumes no responsibility for any issues or damages that may arise from the use of this project.  <br>
+The author assumes no responsibility for any issues or damages that may arise from the use of this project.  
 Use at your own risk.
 
 ## 連絡先
-**Email**: takashi.abe1994@gmail.com
+**Email**  
+takashi.abe1994@gmail.com
