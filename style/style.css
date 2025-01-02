@@ -338,12 +338,12 @@ body {
     .slick-next {
         bottom: -5px;
         position: absolute;
-        right: 30%;
+        right: 0;
     }
     .slick-prev {
         bottom: -5px;
         position: absolute;
-        left: 30%;
+        left: 0;
     }
 
     /* 作品 */
@@ -470,6 +470,15 @@ body {
         min-width: 1200px;
         padding-right: 0;
     }
+
+    .slick-next {
+        /* position状態なので画面サイズで調整 */
+        margin-right: 160px;
+    }
+    .slick-prev {
+        margin-left: 160px;
+
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -478,9 +487,9 @@ body {
         font-size: 14px;
     }
     .wrapper {
-        height: calc(100vh - 6%);
+        height: calc(100vh - 7%);
         overflow: hidden;
-        padding: 10px 15px 0;
+        padding: 10px 8px 0;
     }
     header {
         margin-bottom: 10px;
@@ -493,7 +502,8 @@ body {
         text-align: center;
     }
     .page_section {
-        height: calc(100vh - 140px - 6%);
+        /* androidの場合スマホのボタンに隠れてしまうので調整(iphoneは持っていないので未確認) */
+        height: calc(100vh - 140px - 4%);
         overflow-y: hidden;
     }
     .section_page_content {
@@ -509,17 +519,23 @@ body {
     .nav_ul {
         display: flex;
         justify-content: space-between;
-        width: 100%;
+        margin: 0 auto;
+        width: 80%;
     }
     .nav_li {
         border-radius: 25px;
-        height: 50px;
-        width: 50px;
+        height: 30px;
+        width: 30px;
+    }
+    .nav_icon {
+        aspect-ratio: 30 / 30;
+        height: auto;
+        width: 20px;
     }
 
     /* トップ */
     .portfolio {
-        font-size: 14px;
+        font-size: 12px;
         font-weight: normal;
         letter-spacing: 5px;
         text-align: center;
@@ -571,8 +587,6 @@ body {
         display: flex;
         flex-direction: column;
         margin: 0 auto;
-        min-width: 320px;
-        width: 80%;
     }
     .skill_position {
         align-items: flex-start;
@@ -601,7 +615,7 @@ body {
         font-size: 10px;
         margin-bottom: 10px;
         padding: 0 0 0 15px;
-        width: 50%;
+        width: calc(50% - 8px);
     }
     .skill_li::before {
         content: '';
