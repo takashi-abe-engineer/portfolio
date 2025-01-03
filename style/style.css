@@ -495,15 +495,17 @@ body {
         margin-bottom: 10px;
     }
     footer {
-        bottom: 0;
+        /* android等はナビゲーションバーがあるので、その高さ分上にあげる調整 */
+        bottom: env(safe-area-inset-bottom);
+        font-size: 12px;
         left: 0;
+        padding-bottom: calc(env(safe-area-inset-bottom) + 10px);
         position: absolute;
         right: 0;
         text-align: center;
     }
     .page_section {
-        /* androidの場合スマホのボタンに隠れてしまうので調整(iphoneは持っていないので未確認) */
-        height: calc(100vh - 140px - 4%);
+        height: calc(100vh - 140px - 3%);
         overflow-y: hidden;
     }
     .section_page_content {
@@ -513,7 +515,9 @@ body {
     /* ナビ */
     .nav {
         left: 0;
-        bottom: 25px;
+        /* ナビゲーションバーとコピーライト分上にあげる調整 */
+        bottom: env(safe-area-inset-bottom);
+        padding-bottom: calc(env(safe-area-inset-bottom) + 30px);
         width: 100%;
     }
     .nav_ul {
