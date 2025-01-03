@@ -104,6 +104,10 @@ $(function () {
     // createLineAnimation();
 
     // ナビゲーション切替＆ページ表示切替
+    const $navItems = $('.nav_li');
+    const $pages = $('.page_section');
+    let currentIndex = 0; // 現在のページインデックス
+    let isScrolling = false;
     $('.nav_li').on('click', function () {
         // ナビゲーションのアクティブ切り替え
         $('.nav_li').removeClass('active'); // 表示中ナビゲーション
@@ -111,9 +115,55 @@ $(function () {
 
         // 対応するページの切り替え
         const pageIndex = $(this).index(); // クリックしたナビゲーションのインデックスを取得
+        currentIndex = pageIndex; // ナビ切替とスクロール切替のページ認識を一致させる
+        $(".achievement_slider").css('display', 'none')
         $('.page_section').fadeOut(500).removeClass('active');
-        $('.page_section').eq(pageIndex).delay(750).fadeIn(500).addClass('active');
+        $('.page_section').eq(pageIndex).delay(750).fadeIn(500).addClass('active').promise().done(function () {
+            // ページ切替のフェード処理とスライダー取得処理が競合して横幅が取れずコンテンツが重なるバグ対策
+            $(".achievement_slider").css('display', 'block')
+            $(".achievement_slider").slick('setPosition');
+        });
     });
+
+    // スクロールによる表示切替
+    $(window).on('wheel', function (event) {
+        if (isScrolling) return; // スクロール中は無効化
+        isScrolling = true;
+        $(".achievement_slider").css('display', 'none')
+
+        const delta = event.originalEvent.deltaY;
+        if (delta > 0 && currentIndex < $pages.length - 1) {
+            currentIndex++;
+        } else if (delta < 0 && currentIndex > 0) {
+            currentIndex--;
+        } else {
+            isScrolling = false; // 変更がない場合は解除
+            return;
+        }
+
+        changePage(currentIndex);
+    });
+    // ページ切り替え処理
+    function changePage(index) {
+        $pages.fadeOut(500).removeClass('active');
+        $pages.eq(index).delay(500).fadeIn(500).addClass('active').promise().done(function () {
+            // ページ切替のフェード処理とスライダー取得処理が競合して横幅が取れずコンテンツが重なるバグ対策
+            $(".achievement_slider").css('display', 'block')
+            $(".achievement_slider").slick('setPosition');
+        });
+
+        // ナビゲーションのアクティブ状態を更新
+        $navItems.removeClass('active');
+        $navItems.eq(index).addClass('active');
+
+        // スクロールロック解除
+        setTimeout(() => {
+            isScrolling = false;
+        }, 1000);
+    }
+    // 初期化
+    $pages.hide().eq(0).show().addClass('active');
+    $navItems.eq(0).addClass('active');
 
     // 実績スライダー
     $(".achievement_slider").slick({

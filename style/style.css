@@ -331,6 +331,9 @@ body {
     .achievement_box {
         margin-top: 25px;
     }
+    .achievement_slider {
+        display: none;
+    }
     .achievement_slide .achievement_box:first-child {
         margin-top: 0;
     }
