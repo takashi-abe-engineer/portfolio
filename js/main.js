@@ -125,45 +125,67 @@ $(function () {
         });
     });
 
+    /**
+     * 2025-01-08
+     * 
+     * バグが解消できないのでスクロール切替は停止
+     * 
+     * ・ページ内スクロールがあっても発火してしまう
+     * ・下スクロールのときは対処できたが、上スクロールのときが解消できず、スクロール切替も挙動がおかしくなった
+     */
     // スクロールによる表示切替
-    $(window).on('wheel', function (event) {
-        if (isScrolling) return; // スクロール中は無効化
-        isScrolling = true;
-        $(".achievement_slider").css('display', 'none')
+    // $(window).on('wheel', function (event) {
+    //     if (isScrolling) return; // スクロール中は無効化
+    //     isScrolling = true;
+    //     $(".achievement_slider").css('display', 'none')
 
-        const delta = event.originalEvent.deltaY;
-        if (delta > 0 && currentIndex < $pages.length - 1) {
-            currentIndex++;
-        } else if (delta < 0 && currentIndex > 0) {
-            currentIndex--;
-        } else {
-            isScrolling = false; // 変更がない場合は解除
-            return;
-        }
+    //     const delta = event.originalEvent.deltaY;
+    //     // イベント発火元のスクロール可能な状態を確認
+    //     const currentScrollPosition = $('.work_detail').scrollTop();
+    //     const clientHeight = $('.work_detail')[0]?.clientHeight; // 表示領域
+    //     const scrollHeight = $('.work_detail')[0]?.scrollHeight; // 全体領域
+    //     // スクロール領域がある場合、下限までスクロールされなかったらスクロール切替は処理しない
+    //     if (clientHeight + currentScrollPosition < scrollHeight) {
+    //         isScrolling = false;
+    //         return;
+    //     }
 
-        changePage(currentIndex);
-    });
-    // ページ切り替え処理
-    function changePage(index) {
-        $pages.fadeOut(500).removeClass('active');
-        $pages.eq(index).delay(500).fadeIn(500).addClass('active').promise().done(function () {
-            // ページ切替のフェード処理とスライダー取得処理が競合して横幅が取れずコンテンツが重なるバグ対策
-            $(".achievement_slider").css('display', 'block')
-            $(".achievement_slider").slick('setPosition');
-        });
+    //     if (delta > 0 && currentIndex < $pages.length - 1) {
+    //         currentIndex++;
+    //     } else if (delta < 0 && currentIndex > 0) {
+    //         currentIndex--;
+    //     } else {
+    //         isScrolling = false; // 変更がない場合は解除
+    //         return;
+    //     }
 
-        // ナビゲーションのアクティブ状態を更新
-        $navItems.removeClass('active');
-        $navItems.eq(index).addClass('active');
+    //     changePage(currentIndex);
+    // });
+    // // ページ切り替え処理
+    // function changePage(index) {
+    //     $pages.fadeOut(500).removeClass('active');
+    //     $pages.eq(index).delay(500).fadeIn(500).addClass('active').promise().done(function () {
+    //         // ページ切替のフェード処理とスライダー取得処理が競合して横幅が取れずコンテンツが重なるバグ対策
+    //         $(".achievement_slider").css('display', 'block')
+    //         $(".achievement_slider").slick('setPosition');
 
-        // スクロールロック解除
-        setTimeout(() => {
-            isScrolling = false;
-        }, 1000);
-    }
-    // 初期化
-    $pages.hide().eq(0).show().addClass('active');
-    $navItems.eq(0).addClass('active');
+    //         // スクロールされているとスキルに戻ったとき処理が発火されるのでスクロール領域を元に戻す
+    //         const element = document.querySelector('.work_detail');
+    //         element.scrollTop = 0;
+    //     });
+
+    //     // ナビゲーションのアクティブ状態を更新
+    //     $navItems.removeClass('active');
+    //     $navItems.eq(index).addClass('active');
+
+    //     // スクロールロック解除
+    //     setTimeout(() => {
+    //         isScrolling = false;
+    //     }, 1000);
+    // }
+    // // 初期化
+    // $pages.hide().eq(0).show().addClass('active');
+    // $navItems.eq(0).addClass('active');
 
     // 実績スライダー
     $(".achievement_slider").slick({
